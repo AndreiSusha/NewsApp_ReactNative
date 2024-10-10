@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import * as Font from 'expo-font';
 import AppLoading from 'expo-app-loading';
-import Main from './components/Main';
-import Contacts from './components/Contacts';
+import MainStack from './navigate';
 
 const fonts = () =>
   Font.loadAsync({
@@ -15,7 +14,7 @@ export default function App() {
   const [fontLoaded, setFontLoaded] = useState(false);
 
   if (fontLoaded) {
-    return <Main />;
+    return <MainStack />;
   } else {
     return (
       <AppLoading
