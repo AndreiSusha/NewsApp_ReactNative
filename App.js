@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
-import { gStyles } from './styles/style';
 import * as Font from 'expo-font';
 import AppLoading from 'expo-app-loading';
+import Main from './components/Main';
+import Contacts from './components/Contacts';
 
 const fonts = () =>
   Font.loadAsync({
@@ -14,11 +15,7 @@ export default function App() {
   const [fontLoaded, setFontLoaded] = useState(false);
 
   if (fontLoaded) {
-    return (
-      <View style={gStyles.main}>
-        <Text style={gStyles.title}>Hellllooooo</Text>
-      </View>
-    );
+    return <Main />;
   } else {
     return (
       <AppLoading
