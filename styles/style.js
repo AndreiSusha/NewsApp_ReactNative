@@ -9,6 +9,8 @@ export const gStyles = StyleSheet.create({
   title: {
     fontSize: 24,
     color: '#333',
-    // fontFamily: "Roboto",
+    fontFamily: 'mt-bold',
+    textAlign: 'center',
+    padding: 20,
   },
 });
