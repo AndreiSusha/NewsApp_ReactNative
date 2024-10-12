@@ -1,6 +1,6 @@
 import React from 'react';
 import Main from './components/Main';
-import Contacts from './components/Contacts';
+import FullInfo from './components/FullInfo';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -14,12 +14,30 @@ export default function Navigate() {
         <Stack.Screen
           name="Main"
           component={Main}
-          options={{ title: 'Main Page' }}
+          options={{
+            title: 'Main Page',
+            headerStyle: {
+              backgroundColor: 'yellow',
+              height: 70,
+            },
+            headerTitleStyle: {
+              fontWeight: 'light',
+            },
+          }}
         />
         <Stack.Screen
-          name="Contacts"
-          component={Contacts}
-          options={{ title: 'Contact information' }}
+          name="FullInfo"
+          component={FullInfo}
+          options={{
+            title: 'Article Page',
+            headerStyle: {
+              backgroundColor: '#00FFFF',
+              height: 70,
+            },
+            headerTitleStyle: {
+              fontWeight: '400',
+            },
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>
